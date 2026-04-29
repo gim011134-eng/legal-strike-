@@ -15,7 +15,6 @@ print(f"🚨 [LEGAL STRIKE] Initiating attack on {target}...")
 while True:
     try:
         headers = {'User-Agent': random.choice(agents)}
-        # بلاغات متنوعة (حقوق ملكية، انتحار، إيذاء)
         for t in ['copyright', 'suicide', 'harassment']:
             response = requests.post(f"{url}report/{t}/", headers=headers, timeout=5)
             if response.status_code == 200:
