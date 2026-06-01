@@ -3,7 +3,7 @@ import time
 import random
 
 # بيانات الهدف اللي جبناها بذكاء
-target_user = "7i7.m"
+target_user = "hmdbrhym34201"
 target_id = "52968037415"
 
 # ترويسات قوية لتمويه السيرفر
